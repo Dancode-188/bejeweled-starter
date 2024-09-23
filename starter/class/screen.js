@@ -90,7 +90,7 @@ class Screen {
   static setGrid(row, col, char) {
     if (!Screen.initialized) return;
 
-    if (char.length !== 1) {
+    if (char.length === 0) {
       throw new Error("invalid grid character");
     }
     Screen.grid[row][col] = char;
